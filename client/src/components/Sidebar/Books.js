@@ -9,11 +9,9 @@ import CardActions from "@mui/material/CardActions";
 import { config } from "../../config/config";
 import auth from "./../../auth/auth-helper";
 import DeleteBook from "../../book/DeleteBook";
-import EditIcon from "@mui/icons-material/Edit";
 import SectionHeading from "../Typography/SectionHeading";
 
 export default function Books({ books, removeBook }) {
-  const jwt = auth.isAuthenticated();
 
   return (
     <Box>

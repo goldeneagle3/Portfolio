@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Paper from "@mui/material/Paper";
 
-import auth from "./../auth/auth-helper";
 import { Divider } from "@mui/material";
 import Schools from "./Sidebar/Schools";
 import Languages from "./Sidebar/Languages";
@@ -10,6 +9,7 @@ import Books from "./Sidebar/Books";
 import SnackError from "../errorHandler/SnackError.js";
 import { listBooks } from "./../book/api-book";
 import { listSoftwares } from "./../software/api-software";
+import About from "./Sidebar/About";
 
 export default function SideMenu(props) {
   const [books, setBooks] = useState([]);
@@ -18,7 +18,6 @@ export default function SideMenu(props) {
     openSnack: false,
     error: "",
   });
-  const jwt = auth.isAuthenticated();
 
   // Load Books
   useEffect(() => {
@@ -81,6 +80,8 @@ export default function SideMenu(props) {
   return (
     <Paper sx={{ p: 0.2, bgcolor: "#D6EAF8" }}>
       <Schools />
+      <Divider variant="middle" />
+      <About />
       <Divider variant="middle" />
       <Languages />
       <Divider variant="middle" />

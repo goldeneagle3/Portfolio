@@ -102,6 +102,21 @@ const Header = (props) => {
             </ListItemButton>
           </NavLink>
         )}
+        <NavLink to="/signin" exact>
+          <ListItemButton
+            sx={{
+              bgcolor: "#0BB4EC",
+              color: "#283747",
+              ":hover": {
+                bgcolor: "$283747",
+                color: "#0BB4EC",
+                borderRadius: "2%",
+              },
+            }}
+          >
+            <ListItemText primary="Sign In" />
+          </ListItemButton>
+        </NavLink>
       </List>
     </div>
   );
@@ -156,7 +171,7 @@ const Header = (props) => {
                 gap: 3,
               }}
             >
-              {auth.isAuthenticated() && (
+              {auth.isAuthenticated() ? (
                 <Box
                   sx={{
                     display: "flex",
@@ -181,6 +196,10 @@ const Header = (props) => {
                     </Tooltip>
                   </Link>
                 </Box>
+              ) : (
+                <Link to="/signin" style={{fontSize:'1.4em'}} >
+                  Sign In
+                </Link>
               )}
               <a
                 href="https://www.linkedin.com/in/ensar-ezber-5031a9216/"

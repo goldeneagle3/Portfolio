@@ -1,6 +1,6 @@
 const config = {
-  ServerURI : 'http://localhost:5000/api',
-  ClientURI : 'http://localhost:3000'
+  ServerURI : 'https://ensar-protfolio.herokuapp.com/api',
+  // ClientURI : 'http://localhost:3000'
 }
 
 const isDev = false

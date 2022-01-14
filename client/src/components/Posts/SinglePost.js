@@ -6,7 +6,7 @@ import PostHeader from './PostHeader'
 
 export default function SinglePost({post,removePost}) {
   return (
-    <Card  sx={{ maxWidth: '100%' }} >
+    <Card  sx={{ maxWidth: '100%',m:1 }} >
       <PostHeader post={post}  />
       <PostBody post={post}  />
       <PostFooter post={post} removePost={removePost} />

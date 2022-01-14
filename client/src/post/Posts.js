@@ -70,7 +70,7 @@ export default function Posts() {
       ) : (
         <Stack spacing={1} sx={{ textAlign: "center" }}>
           <Heading header="Top Projects" />
-          <Grid sx={{ flexGrow: 1 }} container spacing={2}>
+          <Grid  container >
             {tops?.map((item, i) => (
               <Grid item key={i} xs={12} sm={6} md={6}>
                 <SinglePost post={item} removePost={removeTops} />
@@ -78,7 +78,7 @@ export default function Posts() {
             ))}
           </Grid>
           <Heading header="Projects" />
-          <Grid sx={{ flexGrow: 1 }} container spacing={4}>
+          <Grid  container >
             {posts?.map((item, i) => (
               <Grid item key={i} xs={12} sm={6} md={6}>
                 <SinglePost post={item} removePost={removePost} />
